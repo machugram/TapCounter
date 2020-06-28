@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var showLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    var count = 0
 
-
+    @IBAction func tapCount(_ sender: UIButton) {
+        count = count + 1
+        showLabel.text = String(count)
+       }
+    
+    @IBAction func ResetButton(_ sender: UIBarButtonItem) {
+        count = 0
+        showLabel.text = String(count)
+    }
+    
 }
 
